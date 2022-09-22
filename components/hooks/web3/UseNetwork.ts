@@ -8,9 +8,8 @@ const NETWORKS: {[k: string]: string} = {
   5: "Goerli Test Network",
   42: "Kovan Test Network",
   56: "Binance Smart Chain",
-  1337: "Ganache",
+  1337: "Ganache local Test ",
 }
-
 const targetId =process.env.NEXT_PUBLIC_TARGET_CHAIN_ID as string;
 const targetNetwork = NETWORKS[targetId];
 

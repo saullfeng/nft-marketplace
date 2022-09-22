@@ -9,4 +9,15 @@ Contract("NftMarket", (account) => {
   before(async () =>{
     _contract =await NftMarket.deployed();
   })
+
+  describe("Mint token", () => {
+    const tokenURI = "https://test.com";
+    before(async () => {
+      await _contract.mintToken(tokenURI, _nftPrice,  {
+        from: accounts[0],
+        value: _listingPrice
+      })
+    })
+
+  })
 });

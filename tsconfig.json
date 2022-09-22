@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "target": "es5",
-    
+
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -23,7 +23,7 @@
       "@providers/*": ["components/providers/*"],
       "@hooks": ["components/hooks"],
       "@hooks/*": ["components/hooks/*"],
-      "@_types/*": ["types/*"],
+      "@_types/*": ["types/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

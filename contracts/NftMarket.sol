@@ -159,10 +159,24 @@ contract NftMarket is ERC721URIStorage, Ownable {
         if (from == address(0)) {
             _addTokenToAllTokensEnumeration(tokenId);
         }
+
+        if(to !=from){
+            _addTokenToOwnerEnumeration(to, tokenId);
+        }
     }
 
     function _addTokenToAllTokensEnumeration(uint256 tokenId) private {
         _idToNftIndex[tokenId] = _allNfts.length;
         _allNfts.push(tokenId);
     }
+    //添加到自己列表
+    //例如已拥有两个
+    // length =2  index 0 1
+    function _addTokenToOwnerEnumeration(address to ,uint256 tokenId) private {
+        uint length = ERC721.balanceOf(to);
+        _ownedTokens[to][length]=tokenId;//实际位置
+        _idToOwnedIndex[tokenId]=length;//列表位置
+    }
+
+
 }

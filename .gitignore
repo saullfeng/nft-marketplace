@@ -184,3 +184,16 @@ example/data/log/*.log
 
 yellowfin.py
 node_modules
+
+# local env files
+.env*.local
+.env.development
+.env.production
+
+keys.json
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo

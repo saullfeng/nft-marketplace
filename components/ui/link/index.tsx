@@ -28,5 +28,4 @@ const ActiveLink: FunctionComponent<LinkProps> = ({children, ...props}) => {
     </Link>
   )
 }
-
 export default ActiveLink;

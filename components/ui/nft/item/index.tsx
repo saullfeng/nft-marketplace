@@ -5,9 +5,9 @@ import { NftMeta, Nft } from "../../../../types/nft";
 type NftItemProps = {
   item: Nft;
   buyNft: (token: number, value: number) => Promise<void>;
-}
+};
 
-const NftItem: FunctionComponent<NftItemProps> = ({item, buyNft}) => {
+const NftItem: FunctionComponent<NftItemProps> = ({ item, buyNft }) => {
   return (
     <>
       <div className="flex-shrink-0">
@@ -19,27 +19,38 @@ const NftItem: FunctionComponent<NftItemProps> = ({item, buyNft}) => {
       </div>
       <div className="flex-1 bg-white p-6 flex flex-col justify-between">
         <div className="flex-1">
-          <p className="text-sm font-medium text-indigo-600">
-            Creatures NFT
-          </p>
+          <p className="text-sm font-medium text-indigo-600">Creatures NFT</p>
           <div className="block mt-2">
-            <p className="text-xl font-semibold text-gray-900">{item.meta.name}</p>
-            <p className="mt-3 mb-3 text-base text-gray-500">{item.meta.description}</p>
+            <p className="text-xl font-semibold text-gray-900">
+              {item.meta.name}
+            </p>
+            <p className="mt-3 mb-3 text-base text-gray-500">
+              {item.meta.description}
+            </p>
           </div>
         </div>
         <div className="overflow-hidden mb-4">
           <dl className="-mx-4 -mt-4 flex flex-wrap">
             <div className="flex flex-col px-4 pt-4">
-              <dt className="order-2 text-sm font-medium text-gray-500">Price</dt>
+              <dt className="order-2 text-sm font-medium text-gray-500">
+                Price
+              </dt>
               <dd className="order-1 text-xl font-extrabold text-indigo-600">
                 <div className="flex justify-center items-center">
                   {item.price}
-                  <img className="h-6" src="/images/small-eth.webp" alt="ether icon"/>
+                  <img
+                    className="h-6"
+                    src="/images/small-eth.webp"
+                    alt="ether icon"
+                  />
                 </div>
               </dd>
             </div>
-            { item.meta.attributes.map(attribute =>
-              <div key={attribute.trait_type} className="flex flex-col px-4 pt-4">
+            {item.meta.attributes.map((attribute) => (
+              <div
+                key={attribute.trait_type}
+                className="flex flex-col px-4 pt-4"
+              >
                 <dt className="order-2 text-sm font-medium text-gray-500">
                   {attribute.trait_type}
                 </dt>
@@ -47,7 +58,7 @@ const NftItem: FunctionComponent<NftItemProps> = ({item, buyNft}) => {
                   {attribute.value}
                 </dd>
               </div>
-            )}
+            ))}
           </dl>
         </div>
         <div>
@@ -69,7 +80,7 @@ const NftItem: FunctionComponent<NftItemProps> = ({item, buyNft}) => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default NftItem;

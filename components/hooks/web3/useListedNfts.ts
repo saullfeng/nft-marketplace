@@ -4,12 +4,9 @@ import { ethers } from "ethers";
 import { useCallback } from "react";
 import { toast } from "react-toastify";
 import useSWR from "swr";
-
-
 type UseListedNftsResponse={
     buyNft:(token:number,value:number)=>Promise<void>
 }
-
 type ListedNftsHookFactory = CryptoHookFactory<Nft[], UseListedNftsResponse>
 export type UseListedNftsHook = ReturnType<ListedNftsHookFactory>
 

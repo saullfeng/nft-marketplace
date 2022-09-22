@@ -50,7 +50,6 @@ export const hookFactory: AccountHookFactory = ({provider, ethereum, isLoading})
       console.error(e);
     }
   }
-
   return {
     ...swr,
     data,
@@ -60,5 +59,4 @@ export const hookFactory: AccountHookFactory = ({provider, ethereum, isLoading})
     mutate,
     connect
   };
-
 }

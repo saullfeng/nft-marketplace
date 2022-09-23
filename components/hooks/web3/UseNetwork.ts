@@ -8,11 +8,11 @@ const NETWORKS: {[k: string]: string} = {
   5: "Goerli Test Network",
   42: "Kovan Test Network",
   56: "Binance Smart Chain",
-  1337: "Ganache local Test ",
+  1337: "Ganache",
 }
 const targetId =process.env.NEXT_PUBLIC_TARGET_CHAIN_ID as string;
 const targetNetwork = NETWORKS[targetId];
-
+console.log(targetNetwork)
 type UseNetworkResponse  ={
     isLoading: boolean;
     isSupported: boolean;
@@ -22,7 +22,6 @@ type UseNetworkResponse  ={
 type NetworkHookFactory = CryptoHookFactory<string, UseNetworkResponse>
 export type UseNetworkHook = ReturnType<NetworkHookFactory>
 export const hookFactory: NetworkHookFactory = ({provider, isLoading}) => () => {
-  console.log(isLoading,"isLoading")
   const {data, isValidating, ...swr} = useSWR(
     provider ? "web3/useNetwork" : null,
     async () => {

@@ -40,18 +40,11 @@ PINATA_SECRET_API_KEY={your api secret key from pinata}
 
 ## ⚡️ Tech-Stack
 Typescript
-
 Solidity
-
-React
-
+React hooks
 Truffle / Ganache
-
 openZeppelin
-
 Metamask (web3)
-
 Web3-react
-
 Pinata IPFS
 

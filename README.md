@@ -1,4 +1,4 @@
-Overview
+
 Marketplace has dependencies on multiple technologies.
 
 Pinata - store images, and NFT metadata
@@ -10,7 +10,7 @@ First, run the development server:
 
 You should pay attention to the configuration file .env or .env.development
 
-
+```bash
 NEXT_PUBLIC_NETWORK_ID=5777
 NEXT_PUBLIC_TARGET_CHAIN_ID=1337
 NEXT_PUBLIC_PINATA_DOMAIN=https://gateway.pinata.cloud

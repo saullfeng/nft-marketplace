@@ -9,7 +9,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <ToastContainer />
-
       <Web3Provider>
         <Component {...pageProps} />
       </Web3Provider>

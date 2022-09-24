@@ -38,8 +38,7 @@ PINATA_SECRET_API_KEY={your api secret key from pinata}
 * Run `npm run dev` in the terminal. App will run at `localhost:3000`
 
 
-
-⚡️ Tech-Stack
+## ⚡️ Tech-Stack
 Typescript
 Solidity
 React
